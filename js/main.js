@@ -71,13 +71,13 @@ if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
 }
 
 // Запросить у пользователя пятиразрядное число и определить, является ли оно палиндромом.
-const num5 = prompt('Введите пятиразрядное число', 12345);
-const digit1 = Math.trunc(num5 / 10000);
-const digit2 = Math.trunc(num5 / 1000) % 10;
-const digit3 = Math.trunc(num5 / 100) % 10;
-const digit4 = Math.trunc(num5 / 10) % 10;
-const digit5 = num5 % 10;
-if (num5 == '' + digit5 + digit4 + digit3 + digit2 + digit1) {
+const num5 = +prompt('Введите пятиразрядное число', 12345);
+const digit4 = Math.trunc(num5 / 10000);
+const digit5 = Math.trunc(num5 / 1000) % 10;
+const digit6 = Math.trunc(num5 / 100) % 10;
+const digit7 = Math.trunc(num5 / 10) % 10;
+const digit8 = num5 % 10;
+if (num5 == '' + digit8 + digit7 + digit6 + digit5 + digit4) {
     alert('Число ' + num5 + ' является палиндромом');
 } else {
     alert('Число ' + num5 + ' не является палиндромом');
